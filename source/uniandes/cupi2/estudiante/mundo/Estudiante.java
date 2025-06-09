@@ -332,28 +332,61 @@ public class Estudiante
      * M�todo para la extensi�n 1.
      * @return Respuesta 1.
      */
-    public double calcularSalario()
+    public String metodo1()
     {
-        doblue promedio = calcularPromedioEstudiante( );
-        if (promedio == -1) return 0;
-        
-        if (semestre >= 8){
-            return 50000;
+        double salario = calcularSalario();
+        if(salario == 0) {
+            return "No hay notas registradas para calcular el salario";
         }
-        else if (semestre >= 4 && semestre < 7){
-            return (promedio >= 4.5) ? 35000 : 25000;
-        }
-        else{
-            return (promedio >= 4.0) ? 25000 : 15000;
-        }
+        return "El salario como monitor sería: $" + salario;
     }
 
     /**
      * M�todo para la extensi�n 2.
      * @return Respuesta 2.
      */
-    public String metodo2( )
+    public String metodo2()
     {
-        return "Respuesta 2";
+        double mejor = mejorNota();
+        if(mejor == -1) {
+            return "No hay cursos calificados";
+        }
+        return "La mejor nota es: " + mejor;
+    }
+
+    
+    public double calcularSalario()
+    {
+        double promedio = calcularPromedioEstudiante();
+        if (promedio == -1) return 0;
+
+        if (semestre >= 8) {
+            return 50000;
+        }
+        else if (semestre >= 4 && semestre <= 7) {
+            return (promedio >= 4.5) ? 35000 : 25000;
+        }
+        else {
+            return (promedio >= 4.0) ? 25000 : 15000;
+        }
     }
 }
+    public double mejorNota()
+    {
+        double mejor = -1;
+        
+        if(curso1.estaCalificado()) {
+            mejor = curso1.darNota();
+        }
+        if(curso2.estaCalificado()) {
+            mejor = Math.max(mejor, curso2.darNota());
+        }
+        if(curso3.estaCalificado()) {
+            mejor = Math.max(mejor, curso3.darNota());
+        }
+        if(curso4.estaCalificado()) {
+            mejor = Math.max(mejor, curso4.darNota());
+        }
+        
+        return mejor;
+    }

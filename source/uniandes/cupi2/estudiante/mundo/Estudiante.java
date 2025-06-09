@@ -91,6 +91,7 @@ public class Estudiante
         nombre = "Jose";
         apellido = "Hernandez";
         codigo = 1073813055;
+        semestre = 4;
         curso1 = new Curso( "ISIS1204", "APO1", 3, Departamento.SISTEMAS );
         curso2 = new Curso( "MATE1203", "Calculo diferencial", 3, Departamento.MATEMATICAS );
         curso3 = new Curso( "FISI1100", "Fisica 1", 4, Departamento.FISICA );

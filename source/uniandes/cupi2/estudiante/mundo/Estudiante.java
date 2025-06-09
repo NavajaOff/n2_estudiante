@@ -1,6 +1,6 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
- * Universidad de los Andes (Bogotá - Colombia) 
- * Departamento de Ingeniería de Sistemas y Computación
+ * Universidad de los Andes (Bogotï¿½ - Colombia) 
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n
  * Licenciado bajo el esquema Academic Free License version 2.1
  * 
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -22,12 +22,12 @@ public class Estudiante
     // -----------------------------------------------------------------
 
     /**
-     * Representa la nota mínima para no estar en prueba académica.
+     * Representa la nota mï¿½nima para no estar en prueba acadï¿½mica.
      */
     public final static double NOTA_PRUEBA_ACADEMICA = 3.25;
 
     /**
-     * Representa la nota mínima para ser candidato a beca.
+     * Representa la nota mï¿½nima para ser candidato a beca.
      */
     public final static double NOTA_CANDIDATO_BECA = 4.75;
 
@@ -36,7 +36,7 @@ public class Estudiante
     // -----------------------------------------------------------------
 
     /**
-     * Código del estudiante.
+     * Cï¿½digo del estudiante.
      */
     private int codigo;
 
@@ -75,33 +75,33 @@ public class Estudiante
     // -----------------------------------------------------------------
 
     /**
-     * Crea un nuevo estudiante con los valores dados por parámetro. <br>
+     * Crea un nuevo estudiante con los valores dados por parï¿½metro. <br>
      * <b>post: </b> El estudiante fue inicializado con los siguientes valores: <br>
-     * Nombre: Juliana, Apellido: Ramírez, Código: 201612345. <br>
+     * Nombre: Juliana, Apellido: Ramï¿½rez, Cï¿½digo: 201612345. <br>
      * Los cursos del estudiante fueron inicializados con los siguientes valores: <br>
-     * Curso 1 - Código: ISIS1204, Nombre: APO1, Créditos: 3, Departamento: SISTEMAS. <br>
-     * Curso 2 - Código: MATE1203, Nombre: Cálculo diferencial, Créditos: 3, Departamento: MATEMÁTICAS. <br>
-     * Curso 3 - Código: FISI1100, Nombre: Física 1, Créditos: 4, Departamento: FISICA. <br>
-     * Curso 4 - Código: BIOL1405, Nombre: Biología celular, Créditos: 4, Departamento: BIOLOGIA.
+     * Curso 1 - Cï¿½digo: ISIS1204, Nombre: APO1, Crï¿½ditos: 3, Departamento: SISTEMAS. <br>
+     * Curso 2 - Cï¿½digo: MATE1203, Nombre: Cï¿½lculo diferencial, Crï¿½ditos: 3, Departamento: MATEMï¿½TICAS. <br>
+     * Curso 3 - Cï¿½digo: FISI1100, Nombre: Fï¿½sica 1, Crï¿½ditos: 4, Departamento: FISICA. <br>
+     * Curso 4 - Cï¿½digo: BIOL1405, Nombre: Biologï¿½a celular, Crï¿½ditos: 4, Departamento: BIOLOGIA.
      */
     public Estudiante( )
     {
-        nombre = "Juliana";
-        apellido = "Ramírez";
-        codigo = 201612345;
+        nombre = "Jose";
+        apellido = "Hernandez";
+        codigo = 1073813055;
         curso1 = new Curso( "ISIS1204", "APO1", 3, Departamento.SISTEMAS );
-        curso2 = new Curso( "MATE1203", "Cálculo diferencial", 3, Departamento.MATEMATICAS );
-        curso3 = new Curso( "FISI1100", "Física 1", 4, Departamento.FISICA );
-        curso4 = new Curso( "BIOL1405", "Biología celular", 4, Departamento.BIOLOGIA );
+        curso2 = new Curso( "MATE1203", "Calculo diferencial", 3, Departamento.MATEMATICAS );
+        curso3 = new Curso( "FISI1100", "Fisica 1", 4, Departamento.FISICA );
+        curso4 = new Curso( "BIOL1405", "Biologia celular", 4, Departamento.BIOLOGIA );
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Retorna el código del estudiante.
-     * @return Código del estudiante.
+     * Retorna el cï¿½digo del estudiante.
+     * @return Cï¿½digo del estudiante.
      */
     public int darCodigo( )
     {
@@ -164,7 +164,7 @@ public class Estudiante
 
     /**
      * Calcula el promedio del estudiante de los cursos que tienen nota asignada.
-     * @return Promedio de los cursos que tienen nota asignada. Si ningún curso tiene nota asignada, retorna -1.
+     * @return Promedio de los cursos que tienen nota asignada. Si ningï¿½n curso tiene nota asignada, retorna -1.
      */
     public double calcularPromedioEstudiante( )
     {
@@ -202,7 +202,7 @@ public class Estudiante
     }
 
     /**
-     * Indica si el estudiante se encuentra en prueba académica.
+     * Indica si el estudiante se encuentra en prueba acadï¿½mica.
      * @return Retorna true si se encuentra en prueba, false de lo contrario.
      */
     public boolean estaEnPrueba( )
@@ -234,8 +234,8 @@ public class Estudiante
     }
 
     /**
-     * Buscar un curso dado su código.
-     * @param pCodigoCurso Código del curso. pCodigoCurso != null && pCodigoCurso != "".
+     * Buscar un curso dado su cï¿½digo.
+     * @param pCodigoCurso Cï¿½digo del curso. pCodigoCurso != null && pCodigoCurso != "".
      * @return Curso buscado, null en caso de no encontrarlo.
      */
     public Curso buscarCurso( String pCodigoCurso )
@@ -263,10 +263,10 @@ public class Estudiante
     }
 
     /**
-     * Registra la nota al curso dado por parámetro. <br>
-     * <b>pre: </b> Existe un curso con el código dado. <br>
+     * Registra la nota al curso dado por parï¿½metro. <br>
+     * <b>pre: </b> Existe un curso con el cï¿½digo dado. <br>
      * <b>post: </b> El curso tiene una nueva nota.
-     * @param pCodigoCurso Código del curso. pCodigoCurso != null && pCodigoCurso != "".
+     * @param pCodigoCurso Cï¿½digo del curso. pCodigoCurso != null && pCodigoCurso != "".
      * @param pNota Nota para asignar al curso. pNota > 0.
      * @return Retorna true si pudo asignar la nota, false de lo contrario.
      */
@@ -284,16 +284,16 @@ public class Estudiante
     }
 
     /**
-     * Cambia el curso con el código dado por parámetro a un nuevo curso con los valores dados por parámetro. <br>
-     * Si ya existe un curso con el código que se desea asignar, no se cambiar la información del curso. <br>
-     * <b>pre: </b> Existe un curso con el código dado. <br>
-     * <b>post: </b> El curso tiene el nuevo código, nombre, créditos y departamento dados por parámetro.
-     * @param pCodigoActual Código actual del curso a cambiar. pCodigoActual != null && pCodigoActual != "".
-     * @param pNuevoCodigo Nuevo código del curso. pNuevoCodigo != null && pNuevoCodigo != "".
+     * Cambia el curso con el cï¿½digo dado por parï¿½metro a un nuevo curso con los valores dados por parï¿½metro. <br>
+     * Si ya existe un curso con el cï¿½digo que se desea asignar, no se cambiar la informaciï¿½n del curso. <br>
+     * <b>pre: </b> Existe un curso con el cï¿½digo dado. <br>
+     * <b>post: </b> El curso tiene el nuevo cï¿½digo, nombre, crï¿½ditos y departamento dados por parï¿½metro.
+     * @param pCodigoActual Cï¿½digo actual del curso a cambiar. pCodigoActual != null && pCodigoActual != "".
+     * @param pNuevoCodigo Nuevo cï¿½digo del curso. pNuevoCodigo != null && pNuevoCodigo != "".
      * @param pNombre Nombre del curso. pNombre != null && pNombre != "".
-     * @param pCreditos Créditos del curso. pCreditos > 0.
+     * @param pCreditos Crï¿½ditos del curso. pCreditos > 0.
      * @param pDepartamento Departamento del curso.
-     * @return Retorna true si se cambió el curso, false si no se cambió porque ya existía un curso con el código que se deseaba asignar.
+     * @return Retorna true si se cambiï¿½ el curso, false si no se cambiï¿½ porque ya existï¿½a un curso con el cï¿½digo que se deseaba asignar.
      */
     public boolean cambiarCurso( String pCodigoActual, String pNuevoCodigo, String pNombre, int pCreditos, Departamento pDepartamento )
     {
@@ -322,11 +322,11 @@ public class Estudiante
     }
 
     // -----------------------------------------------------------------
-    // Puntos de Extensión
+    // Puntos de Extensiï¿½n
     // -----------------------------------------------------------------
 
     /**
-     * Método para la extensión 1.
+     * Mï¿½todo para la extensiï¿½n 1.
      * @return Respuesta 1.
      */
     public String metodo1( )
@@ -335,7 +335,7 @@ public class Estudiante
     }
 
     /**
-     * Método para la extensión 2.
+     * Mï¿½todo para la extensiï¿½n 2.
      * @return Respuesta 2.
      */
     public String metodo2( )

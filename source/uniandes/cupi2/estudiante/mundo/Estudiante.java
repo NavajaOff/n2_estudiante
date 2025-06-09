@@ -70,6 +70,8 @@ public class Estudiante
      */
     private Curso curso4;
 
+    private int semestre;
+
     // -----------------------------------------------------------------
     // Constructores
     // -----------------------------------------------------------------

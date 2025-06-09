@@ -1,6 +1,6 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
- * Universidad de los Andes (Bogotá - Colombia) 
- * Departamento de Ingeniería de Sistemas y Computación
+ * Universidad de los Andes (Bogotï¿½ - Colombia) 
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n
  * Licenciado bajo el esquema Academic Free License version 2.1
  * 
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -29,7 +29,7 @@ public class PanelOpciones extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Representa el comando para verificar si el estudiante está en prueba académica.
+     * Representa el comando para verificar si el estudiante estï¿½ en prueba acadï¿½mica.
      */
     private static final String PRUEBA = "PRUEBA";
 
@@ -39,44 +39,48 @@ public class PanelOpciones extends JPanel implements ActionListener
     private static final String BECA = "BECA";
 
     /**
-     * Representa el comando para la opción 1.
+     * Representa el comando para la opciÃ³n 1.
      */
-    private static final String OPCION1 = "OPCION_1";
+    private static final String OPCION1 = "OPCION 1";
 
     /**
-     * Representa el comando para la opción 2.
+     * Representa el comando para la opciÃ³n 2.
      */
-    private static final String OPCION2 = "OPCION_2";
+    private static final String OPCION2 = "OPCION 2";
+
+    private static final String CAMBIAR_SEMESTRE = "CAMBIAR SEMESTRE";
 
     // -----------------------------------------------------------------
     // Atributos de Interfaz
     // -----------------------------------------------------------------
 
     /**
-     * Botón para verificar que el estudiante está en prueba.
+     * Botï¿½n para verificar que el estudiante estï¿½ en prueba.
      */
     private JButton btnPrueba;
 
     /**
-     * Botón para verificar que el estudiante puede tener beca.
+     * Botï¿½n para verificar que el estudiante puede tener beca.
      */
     private JButton btnBeca;
 
     /**
-     * Botón para el punto de extensión 1.
+     * Botï¿½n para el punto de extensiï¿½n 1.
      */
     private JButton btnOpcion1;
 
     /**
-     * Botón para el punto de extensión 2.
+     * Botï¿½n para el punto de extensiï¿½n 2.
      */
     private JButton btnOpcion2;
+
+    private JButton btnCambiarSemestre;
 
     // -----------------------------------------------------------------
     // Atributos
     // -----------------------------------------------------------------
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazEstudiante principal;
 
@@ -86,12 +90,12 @@ public class PanelOpciones extends JPanel implements ActionListener
 
     /**
      * Crea el panel con sus botones.
-     * @param pPrincipal Ventana principal de la aplicación. pPrincipal != null.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n. pPrincipal != null.
      */
     public PanelOpciones( InterfazEstudiante pPrincipal )
     {
         principal = pPrincipal;
-        setLayout( new GridLayout( 1, 4, 2, 2 ) );
+        setLayout( new GridLayout( 1, 5, 2, 2 ) );
         setBorder( new TitledBorder( "Opciones" ) );
 
         btnBeca = new JButton( "Candidato beca" );
@@ -99,29 +103,34 @@ public class PanelOpciones extends JPanel implements ActionListener
         btnBeca.addActionListener( this );
         add( btnBeca );
 
-        btnPrueba = new JButton( "Prueba académica" );
+        btnPrueba = new JButton( "Prueba academica" );
         btnPrueba.setActionCommand( PRUEBA );
         btnPrueba.addActionListener( this );
         add( btnPrueba );
 
-        btnOpcion1 = new JButton( "Opción 1" );
+        btnOpcion1 = new JButton( "Opcion 1" );
         btnOpcion1.setActionCommand( OPCION1 );
         btnOpcion1.addActionListener( this );
         add( btnOpcion1 );
 
-        btnOpcion2 = new JButton( "Opción 2" );
+        btnOpcion2 = new JButton( "Opcion 2" );
         btnOpcion2.setActionCommand( OPCION2 );
         btnOpcion2.addActionListener( this );
         add( btnOpcion2 );
+
+        btnCambiarSemestre = new JButton( "Cambiar Semestre" );
+        btnCambiarSemestre.setActionCommand( CAMBIAR_SEMESTRE );
+        btnCambiarSemestre.addActionListener( this );
+        add( btnCambiarSemestre );
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // MÃ©todos
     // -----------------------------------------------------------------
 
     /**
      * Manejo de los eventos de los botones.
-     * @param pEvento Acción que generó el evento. pEvento != null.
+     * @param pEvento Acciï¿½n que generï¿½ el evento. pEvento != null.
      */
     public void actionPerformed( ActionEvent pEvento )
     {
@@ -142,6 +151,10 @@ public class PanelOpciones extends JPanel implements ActionListener
         else if( comando.equals( OPCION2 ) )
         {
             principal.reqFuncOpcion2( );
+        }
+        else if( comando.equals( CAMBIAR_SEMESTRE ) )
+        {
+            principal.cambiarSemestre( );
         }
 
     }

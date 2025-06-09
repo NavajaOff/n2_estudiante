@@ -1,6 +1,6 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
- * Universidad de los Andes (Bogotá - Colombia) 
- * Departamento de Ingeniería de Sistemas y Computación
+ * Universidad de los Andes (Bogotï¿½ - Colombia) 
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n
  * Licenciado bajo el esquema Academic Free License version 2.1
  * 
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -22,7 +22,7 @@ import uniandes.cupi2.estudiante.mundo.Curso.Departamento;
 import uniandes.cupi2.estudiante.mundo.Estudiante;
 
 /**
- * Ventana principal de la aplicación.
+ * Ventana principal de la aplicaciï¿½n.
  */
 @SuppressWarnings("serial")
 public class InterfazEstudiante extends JFrame
@@ -38,7 +38,7 @@ public class InterfazEstudiante extends JFrame
     private PanelImagen panelImagen;
 
     /**
-     * Panel con la información del estudiante.
+     * Panel con la informaciï¿½n del estudiante.
      */
     private PanelInfoEstudiante panelInfoEstudiante;
 
@@ -48,22 +48,22 @@ public class InterfazEstudiante extends JFrame
     private PanelOpciones panelOpciones;
 
     /**
-     * Panel con la información del curso 1.
+     * Panel con la informaciï¿½n del curso 1.
      */
     private PanelCurso panelCurso1;
 
     /**
-     * Panel con la información del curso 2.
+     * Panel con la informaciï¿½n del curso 2.
      */
     private PanelCurso panelCurso2;
 
     /**
-     * Panel con la información del curso 3.
+     * Panel con la informaciï¿½n del curso 3.
      */
     private PanelCurso panelCurso3;
 
     /**
-     * Panel con la información del curso 4.
+     * Panel con la informaciï¿½n del curso 4.
      */
     private PanelCurso panelCurso4;
 
@@ -80,7 +80,7 @@ public class InterfazEstudiante extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Crea la ventana principal de la aplicación con todos sus paneles.
+     * Crea la ventana principal de la aplicaciï¿½n con todos sus paneles.
      */
     public InterfazEstudiante( )
     {
@@ -127,7 +127,7 @@ public class InterfazEstudiante extends JFrame
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
@@ -144,7 +144,7 @@ public class InterfazEstudiante extends JFrame
 
     /**
      * Asigna la nota de un curso.
-     * @param pCodigo Código del curso que se le va a asignar la nota. pCodigo != null && pCodigo != "".
+     * @param pCodigo Cï¿½digo del curso que se le va a asignar la nota. pCodigo != null && pCodigo != "".
      */
     public void asignarNotaCurso( String pCodigo )
     {
@@ -174,13 +174,13 @@ public class InterfazEstudiante extends JFrame
             }
             catch( NumberFormatException e )
             {
-                JOptionPane.showMessageDialog( this, "Debe ingresar un valor numérico.", "Asignar nota", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "Debe ingresar un valor numÃ©rico.", "Asignar nota", JOptionPane.ERROR_MESSAGE );
             }
         }
     }
 
     /**
-     * Indica si el estudiante está en prueba o no.
+     * Indica si el estudiante estï¿½ en prueba o no.
      */
     public void estudianteEnPrueba( )
     {
@@ -195,11 +195,11 @@ public class InterfazEstudiante extends JFrame
         {
             if( estaPrueba )
             {
-                JOptionPane.showMessageDialog( this, "El estudiante se encuentra en prueba académica (promedio < 3.25).", "Estudiante en prueba", JOptionPane.INFORMATION_MESSAGE );
+                JOptionPane.showMessageDialog( this, "El estudiante se encuentra en prueba acadÃ©mica (promedio < 3.25).", "Estudiante en prueba", JOptionPane.INFORMATION_MESSAGE );
             }
             else
             {
-                JOptionPane.showMessageDialog( this, "El estudiante no se encuentra en prueba académica (promedio >= 3.25).", "Estudiante en prueba", JOptionPane.INFORMATION_MESSAGE );
+                JOptionPane.showMessageDialog( this, "El estudiante no se encuentra en prueba acadÃ©mica (promedio >= 3.25).", "Estudiante en prueba", JOptionPane.INFORMATION_MESSAGE );
             }
         }
 
@@ -232,12 +232,12 @@ public class InterfazEstudiante extends JFrame
     }
 
     /**
-     * Cambia la información del curso actual.
-     * @param pCodigoActual Código actual del curso. pCodigoActual != null && pCodigoActual != "".
-     * @param pNuevoCodigo Código nuevo del curso. pCodigoNuevo != null && pCodigoNuevo != "".
+     * Cambia la informaciï¿½n del curso actual.
+     * @param pCodigoActual Cï¿½digo actual del curso. pCodigoActual != null && pCodigoActual != "".
+     * @param pNuevoCodigo Cï¿½digo nuevo del curso. pCodigoNuevo != null && pCodigoNuevo != "".
      * @param pNombre Nombre nuevo del curso. pNombre != "" && pNombre != null.
      * @param pDepartamento Departamento del curso. pDepartamento != null.
-     * @param pCreditos Créditos a asignar. pCreditos >= 0.
+     * @param pCreditos Crï¿½ditos a asignar. pCreditos >= 0.
      */
     public void cambiarCurso( String pCodigoActual, String pNuevoCodigo, String pNombre, Departamento pDepartamento, int pCreditos )
     {
@@ -247,13 +247,13 @@ public class InterfazEstudiante extends JFrame
         }
         else
         {
-            JOptionPane.showMessageDialog( this, "Ya existe un curso con código " + pNuevoCodigo + ".", "Cambiar curso", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( this, "Ya existe un curso con codigo " + pNuevoCodigo + ".", "Cambiar curso", JOptionPane.ERROR_MESSAGE );
         }
     }
 
     /**
-     * Muestra el diálogo que permite cambiar un curso y su información.
-     * @param pCodigoCurso Código del curso a cambiar. pCodigoCurso != "" && pCodigoCurso != null.
+     * Muestra el diÃ¡logo que permite cambiar un curso y su informaciÃ³n.
+     * @param pCodigoCurso CÃ³digo del curso a cambiar. pCodigoCurso != "" && pCodigoCurso != null.
      */
     public void mostrarDialogoCambiarCurso( String pCodigoCurso )
     {
@@ -261,12 +261,38 @@ public class InterfazEstudiante extends JFrame
         dialogo.setVisible( true );
     }
 
+
+    public void cambiarSemestre()
+    {
+        String strSemestre = JOptionPane.showInputDialog(this, "Ingrese el nuevo semestre:", "Cambiar Semestre", JOptionPane.QUESTION_MESSAGE);
+        if(strSemestre != null)
+        {
+            try
+            {
+                int nuevoSemestre = Integer.parseInt(strSemestre);
+                if(estudiante.cambiarSemestre(nuevoSemestre))
+                {
+                    actualizar();
+                    JOptionPane.showMessageDialog(this, "Semestre actualizado exitosamente", "Cambiar Semestre", JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this, "El semestre debe ser mayor a 0", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(this, "Debe ingresar un valor numÃ©rico vÃ¡lido", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+
     // -----------------------------------------------------------------
-    // Puntos de Extensión
+    // Puntos de Extensiï¿½n
     // -----------------------------------------------------------------
 
     /**
-     * Opción 1 de extensión.
+     * Opciï¿½n 1 de extensiï¿½n.
      */
     public void reqFuncOpcion1( )
     {
@@ -276,7 +302,7 @@ public class InterfazEstudiante extends JFrame
     }
 
     /**
-     * Opción 2 de extensión.
+     * Opciï¿½n 2 de extensiï¿½n.
      */
     public void reqFuncOpcion2( )
     {
@@ -290,8 +316,8 @@ public class InterfazEstudiante extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Ejecuta la aplicación.
-     * @param pArgs Parámetros de la ejecución. No son necesarios.
+     * Ejecuta la aplicaciï¿½n.
+     * @param pArgs Parï¿½metros de la ejecuciï¿½n. No son necesarios.
      */
     public static void main( String[] pArgs )
     {

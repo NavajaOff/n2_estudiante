@@ -1,6 +1,6 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
- * Universidad de los Andes (Bogotá - Colombia) 
- * Departamento de Ingeniería de Sistemas y Computación
+ * Universidad de los Andes (Bogotï¿½ - Colombia) 
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n
  * Licenciado bajo el esquema Academic Free License version 2.1
  * 
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -29,7 +29,7 @@ import uniandes.cupi2.estudiante.mundo.Curso;
 import uniandes.cupi2.estudiante.mundo.Curso.Departamento;
 
 /**
- * Diálogo para el ingreso de un Curso.
+ * Diï¿½logo para el ingreso de un Curso.
  */
 @SuppressWarnings("serial")
 public class DialogoCambiarCurso extends JDialog implements ActionListener
@@ -54,12 +54,12 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Etiqueta código actual.
+     * Etiqueta cï¿½digo actual.
      */
     private JLabel lblCodigoActual;
 
     /**
-     * Etiqueta código nuevo.
+     * Etiqueta cï¿½digo nuevo.
      */
     private JLabel lblCodigoNuevo;
 
@@ -74,17 +74,17 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
     private JLabel lblDepartamento;
 
     /**
-     * Etiqueta créditos.
+     * Etiqueta crï¿½ditos.
      */
     private JLabel lblCreditos;
 
     /**
-     * Campo de texto del código actual.
+     * Campo de texto del cï¿½digo actual.
      */
     private JTextField txtCodigoActual;
 
     /**
-     * Campo de texto del código nuevo.
+     * Campo de texto del cï¿½digo nuevo.
      */
     private JTextField txtCodigoNuevo;
 
@@ -99,17 +99,17 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
     private JComboBox cbDepartamentos;
 
     /**
-     * Campo de texto de los créditos.
+     * Campo de texto de los crï¿½ditos.
      */
     private JTextField txtCreditos;
 
     /**
-     * Botón para aceptar.
+     * Botï¿½n para aceptar.
      */
     private JButton btnAceptar;
 
     /**
-     * Botón para cancelar.
+     * Botï¿½n para cancelar.
      */
     private JButton btnCancelar;
 
@@ -118,7 +118,7 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación.
+     * Ventana principal de la aplicaciï¿½n.
      */
     private InterfazEstudiante principal;
 
@@ -127,9 +127,9 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Crea el diálogo que permite cambiar la información de un curso.
-     * @param pPrincipal Ventana principal de la aplicación. pPrincipal != null.
-     * @param pCodigoCurso Código actual del curso. pCodigoCurso != null && pcodigoCurso != "".
+     * Crea el diï¿½logo que permite cambiar la informaciï¿½n de un curso.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n. pPrincipal != null.
+     * @param pCodigoCurso Cï¿½digo actual del curso. pCodigoCurso != null && pcodigoCurso != "".
      */
     public DialogoCambiarCurso( InterfazEstudiante pPrincipal, String pCodigoCurso )
     {
@@ -142,16 +142,16 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
         setLayout( new BorderLayout( ) );
         JPanel panelInfo = new JPanel( );
         panelInfo.setLayout( new GridLayout( 6, 2 ) );
-        panelInfo.setBorder( new TitledBorder( "Información curso" ) );
+        panelInfo.setBorder( new TitledBorder( "InformaciÃ³n curso" ) );
 
-        lblCodigoActual = new JLabel( "Código actual:" );
+        lblCodigoActual = new JLabel( "CÃ³digo actual:" );
         panelInfo.add( lblCodigoActual );
 
         txtCodigoActual = new JTextField( pCodigoCurso );
         txtCodigoActual.setEditable( false );
         panelInfo.add( txtCodigoActual );
 
-        lblCodigoNuevo = new JLabel( "Código nuevo:" );
+        lblCodigoNuevo = new JLabel( "CÃ³digo nuevo:" );
         panelInfo.add( lblCodigoNuevo );
 
         txtCodigoNuevo = new JTextField( );
@@ -168,12 +168,12 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
 
         cbDepartamentos = new JComboBox( );
         cbDepartamentos.addItem( "Ing. Sistemas" );
-        cbDepartamentos.addItem( "Matemáticas" );
-        cbDepartamentos.addItem( "Física" );
-        cbDepartamentos.addItem( "Biología" );
+        cbDepartamentos.addItem( "MatemÃ¡ticas" );
+        cbDepartamentos.addItem( "FÃ­sica" );
+        cbDepartamentos.addItem( "BiologÃ­a" );
         panelInfo.add( cbDepartamentos );
 
-        lblCreditos = new JLabel( "Créditos:" );
+        lblCreditos = new JLabel( "CrÃ©ditos:" );
         panelInfo.add( lblCreditos );
 
         txtCreditos = new JTextField( );
@@ -197,12 +197,12 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
      * Manejo de los eventos de los botones.
-     * @param pEvento Acción que generó el evento. pEvento != null.
+     * @param pEvento Acciï¿½n que generï¿½ el evento. pEvento != null.
      */
     public void actionPerformed( ActionEvent pEvento )
     {
@@ -221,15 +221,15 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
             {
                 Departamento depto = Departamento.SISTEMAS;
                 String depSelec = ( String )cbDepartamentos.getSelectedItem( );
-                if( depSelec.equals( "Matemáticas" ) )
+                if( depSelec.equals( "MatemÃ¡ticas" ) )
                 {
                     depto = Departamento.MATEMATICAS;
                 }
-                else if( depSelec.equals( "Física" ) )
+                else if( depSelec.equals( "FÃ­sica" ) )
                 {
                     depto = Departamento.FISICA;
                 }
-                else if( depSelec.equals( "Biología" ) )
+                else if( depSelec.equals( "BiologÃ­a" ) )
                 {
                     depto = Departamento.BIOLOGIA;
                 }
@@ -238,7 +238,7 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
                     int creditos = Integer.parseInt( creditosStr );
                     if( creditos <= 0 )
                     {
-                        JOptionPane.showMessageDialog( this, "El número de créditos debería ser mayor a 0.", "Cambiar curso", JOptionPane.ERROR_MESSAGE );
+                        JOptionPane.showMessageDialog( this, "El nÃºmero de crÃ©ditos deberÃ­a ser mayor a 0.", "Cambiar curso", JOptionPane.ERROR_MESSAGE );
                     }
                     else
                     {
@@ -248,7 +248,7 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener
                 }
                 catch( NumberFormatException e )
                 {
-                    JOptionPane.showMessageDialog( this, "La cantidad de créditos debe ser un valor numérico.", "Cambiar curso", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog( this, "La cantidad de creditos debe ser un valor numÃ©rico.", "Cambiar curso", JOptionPane.ERROR_MESSAGE );
                 }
             }
         }

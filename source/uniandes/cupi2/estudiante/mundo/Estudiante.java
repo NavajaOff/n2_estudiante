@@ -70,6 +70,7 @@ public class Estudiante
      */
     private Curso curso4;
 
+
     private int semestre;
 
     // -----------------------------------------------------------------
@@ -163,6 +164,20 @@ public class Estudiante
     public Curso darCurso4( )
     {
         return curso4;
+    }
+
+    public int darSemestre()
+    {
+        return semestre;
+    }
+
+    public boolean cambiarSemestre(int pSemestre)
+    {
+        if (pSemestre > 0) {
+            semestre = pSemestre;
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -388,6 +403,6 @@ public class Estudiante
             mejor = Math.max(mejor, curso4.darNota());
         }
         
-            return mejor;
-        }
+        return mejor;
     }
+}

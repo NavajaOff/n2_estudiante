@@ -332,9 +332,20 @@ public class Estudiante
      * M�todo para la extensi�n 1.
      * @return Respuesta 1.
      */
-    public String metodo1( )
+    public double calcularSalario()
     {
-        return "Respuesta 1";
+        doblue promedio = calcularPromedioEstudiante( );
+        if (promedio == -1) return 0;
+        
+        if (semestre >= 8){
+            return 50000;
+        }
+        else if (semestre >= 4 && semestre < 7){
+            return (promedio >= 4.5) ? 35000 : 25000;
+        }
+        else{
+            return (promedio >= 4.0) ? 25000 : 15000;
+        }
     }
 
     /**

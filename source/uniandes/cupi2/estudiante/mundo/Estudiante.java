@@ -370,7 +370,7 @@ public class Estudiante
             return (promedio >= 4.0) ? 25000 : 15000;
         }
     }
-}
+
     public double mejorNota()
     {
         double mejor = -1;
@@ -388,5 +388,6 @@ public class Estudiante
             mejor = Math.max(mejor, curso4.darNota());
         }
         
-        return mejor;
+            return mejor;
+        }
     }
